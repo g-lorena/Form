@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="form.css" />
+    <title>Diagramme 1</title>
+</head>
+<body>
+    <?php
+        mysql_connect("localhost","root","") or die("erreur");
+        mysql_select_db("bdd") or die("la bdd est introuvable.");
+    ?>
+    
+
+    <div>
+        <form method = "GET" action="/action_page.php">
+          <label for="fname">Nom</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Prenom</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="lname">Adresse mail</label>
+          <input type="text" id="amail" name="mail" placeholder="Your mail address..">
+          
+          <label for="lname">Mot de passe</label>
+          <input type="text" id="mpassword" name="password" placeholder="Your Password..">
+
+         
+          <input type="submit" value="Submit">
+        </form>
+        
+      </div>
+</body>
+</html>
